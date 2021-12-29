@@ -1,0 +1,14 @@
+server:
+  port: 8083
+  address: 192.168.1.12
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://node2:8082/eureka/,http://node1:8081/eureka/
+  instance:
+    hostname: node3
+spring:
+  application:
+    name: euraka-server
